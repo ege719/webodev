@@ -25,10 +25,10 @@
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#hakkinda">Hakkımda</a>
+              <a class="nav-link" href="#hakkinda">Hakkında</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#ozgecmis">Özgeçmişim</a>
+              <a class="nav-link" href="#ozgecmis">Özgeçmiş</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#sehrim">Şehrim</a>
@@ -86,8 +86,8 @@
               <div class="card-body">
                 <h5>Eğitim</h5>
                 <p>
-                  <strong>Sakarya Üniversitesi</strong><br />Bilgisayar
-                  Mühendisliği 1. Sınıf Ögrencisiyim
+                  <strong>Sakarya Üniversitesi</strong><br />
+                    1. Sınıf Bilgisayar Muhendisiyim
                 </p>
               </div>
             </div>
@@ -95,7 +95,7 @@
           <div class="col-md-6">
             <div class="card h-100 kart-efekti">
               <div class="card-body">
-                <h5>Ögrenmekte Oldugum Beceriler</h5>
+                <h5>Kendimi Gelistirdigim Alanlar</h5>
                 <p>C++, C#, HTML, CSS, Bootstrap, SQL</p>
               </div>
             </div>
@@ -104,10 +104,9 @@
       </div>
     </section>
 
-    <!-- gorsellerde hata cıkıyor yerel dosyaya ilerde cekecem -->
     <section id="sehrim" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-4">Sehrim</h2>
+        <h2 class="text-center mb-4">İstanbul'un Tarihi Eserleri</h2>
 
         <div
           id="istanbulSlider"
@@ -116,12 +115,13 @@
         >
           <!-- Görseller -->
           <div class="carousel-inner">
-            <!-- Galata -->
+            <!-- Galata kulesi -->
             <div class="carousel-item active">
               <img
-                src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1200&h=500&auto=format&fit=crop"
+                src="/resimler/galatakulesi.jpg"
                 class="d-block w-100"
                 alt="Galata"
+                style="height: 500px; object-fit: cover"
               />
               <div class="carousel-caption bg-dark bg-opacity-50 rounded">
                 <h5>Galata Kulesi</h5>
@@ -131,9 +131,10 @@
             <!-- Ayasofya -->
             <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=1200&h=500&auto=format&fit=crop"
+                src="/resimler/ayasofya.jpg"
                 class="d-block w-100"
                 alt="Ayasofya"
+                style="height: 500px; object-fit: cover"
               />
               <div class="carousel-caption bg-dark bg-opacity-50 rounded">
                 <h5>Ayasofya Camii</h5>
@@ -143,9 +144,10 @@
             <!-- Kız Kulesi -->
             <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1621535730623-66779428be52?q=80&w=1200&h=500&auto=format&fit=crop"
+                src="/resimler/kızkulesi.jpg"
                 class="d-block w-100"
                 alt="Kız Kulesi"
+                style="height: 500px; object-fit: cover"
               />
               <div class="carousel-caption bg-dark bg-opacity-50 rounded">
                 <h5>Kız Kulesi</h5>
@@ -155,9 +157,10 @@
             <!-- Sultanahmet -->
             <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1590053420421-4328892f3922?q=80&w=1200&h=500&auto=format&fit=crop"
+                src="/resimler/sultanahmetcamii.jpg"
                 class="d-block w-100"
                 alt="Sultanahmet"
+                style="height: 500px; object-fit: cover"
               />
               <div class="carousel-caption bg-dark bg-opacity-50 rounded">
                 <h5>Sultanahmet Camii</h5>
@@ -165,6 +168,7 @@
             </div>
           </div>
 
+          <!-- Kontroller -->
           <button
             class="carousel-control-prev"
             type="button"
@@ -184,6 +188,76 @@
         </div>
       </div>
     </section>
+
+    <!-- slider in calısması icin gerekli kod-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Mirasımız Bölümü -->
+    <section id="mirasimiz" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 baslik-stili">Kültürel Mirasımız</h2>
+        <div class="row g-4">
+          <!-- Miras 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 kart-efekti shadow-sm border-0">
+              <!-- Türk Kahvesi -->
+              <img
+                src="/resimler/turkkahvesi.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 200px"
+                alt="Türk Kahvesi"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title text-primary">Türk Kahvesi</h5>
+                <p class="card-text text-secondary">
+                  Kendine has pişirme tekniği, sunumu ve asırlardır süregelen
+                  geleneğiyle sohbetlerin vazgeçilmez eşlikçisi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Miras 2 -->
+          <div class="col-md-4">
+            <div class="card h-100 kart-efekti shadow-sm border-0">
+              <!-- Ebru Sanatı  -->
+              <img
+                src="/resimler/ebru.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 200px"
+                alt="Ebru Sanatı"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title text-primary">Ebru Sanatı</h5>
+                <p class="card-text text-secondary">
+                  Su üzerine damlatılan boyaların oluşturduğu eşsiz desenlerin
+                  kağıda aktarılmasıyla hayat bulan büyüleyici el sanatımız.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Miras 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 kart-efekti shadow-sm border-0">
+              <!-- Çini Sanatı -->
+              <img
+                src="/resimler/cini.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 200px"
+                alt="Çini Sanatı"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title text-primary">Çini Sanatı</h5>
+                <p class="card-text text-secondary">
+                  Tarihi camilerimizi ve saraylarımızı süsleyen, toprağın ateşle
+                  buluşup sanata dönüştüğü eşsiz motifler.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
