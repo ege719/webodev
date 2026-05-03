@@ -87,7 +87,7 @@
                 <h5>Eğitim</h5>
                 <p>
                   <strong>Sakarya Üniversitesi</strong><br />
-                    1. Sınıf Bilgisayar Muhendisiyim
+                  1. Sınıf Bilgisayar Muhendisiyim
                 </p>
               </div>
             </div>
@@ -254,6 +254,182 @@
                   buluşup sanata dönüştüğü eşsiz motifler.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--buraya apı kısmı gelecek -->
+
+    <!--apı yeri-->
+
+    <!-- iletisim formu  -->
+    <section id="iletisim" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 baslik-stili">İletişim</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card shadow-sm border-0 p-4">
+              <form id="iletisimFormu" action="islem.php" method="POST">
+                <!-- ad soyad alma -->
+                <div class="mb-3">
+                  <label for="adSoyad" class="form-label"
+                    >Adınız Soyadınız:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="adSoyad"
+                    name="adSoyad"
+                    placeholder="Lütfen adınızı giriniz"
+                  />
+                </div>
+
+                <!-- Email alma  -->
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >E-posta Adresiniz:</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="ornek@sakarya.edu.tr"
+                  />
+                </div>
+
+                <!-- Telefon alma -->
+                <div class="mb-3">
+                  <label for="telefon" class="form-label"
+                    >Telefon Numaranız:</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="telefon"
+                    name="telefon"
+                    placeholder="05xx xxx xx xx"
+                  />
+                </div>
+
+                <!-- konu secimi -->
+                <div class="mb-3">
+                  <label for="konu" class="form-label">Mesaj Konusu:</label>
+                  <select class="form-select" id="konu" name="konu">
+                    <option value="" selected>Bir konu seçiniz...</option>
+                    <option value="genel">Genel Bilgi</option>
+                    <option value="proje">Proje Hakkında</option>
+                    <option value="hata">Hata Bildirimi</option>
+                  </select>
+                </div>
+
+                <!-- cinsiyet secme -->
+                <div class="mb-3">
+                  <label class="form-label d-block">Cinsiyet:</label>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="cinsiyet"
+                      id="erkek"
+                      value="erkek"
+                    />
+                    <label class="form-check-label" for="erkek">Erkek</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="cinsiyet"
+                      id="kadin"
+                      value="kadin"
+                    />
+                    <label class="form-check-label" for="kadin">Kadın</label>
+                  </div>
+                </div>
+
+                <!-- ilgi alanları -->
+                <div class="mb-3">
+                  <label class="form-label d-block"
+                    >İlgilendiğiniz Alanlar:</label
+                  >
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="ilgi[]"
+                      id="yazilim"
+                      value="yazilim"
+                    />
+                    <label class="form-check-label" for="yazilim"
+                      >Yazılım</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="ilgi[]"
+                      id="tasarim"
+                      value="tasarim"
+                    />
+                    <label class="form-check-label" for="tasarim"
+                      >Tasarım</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="ilgi[]"
+                      id="donanim"
+                      value="donanim"
+                    />
+                    <label class="form-check-label" for="donanim"
+                      >Donanım</label
+                    >
+                  </div>
+                </div>
+
+                <!--mesaj kısmı-->
+                <div class="mb-3">
+                  <label for="mesaj" class="form-label">Mesajınız:</label>
+                  <textarea
+                    class="form-control"
+                    id="mesaj"
+                    name="mesaj"
+                    rows="4"
+                    placeholder="Mesajınızı buraya yazınız..."
+                  ></textarea>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button
+                    type="button"
+                    onclick="jsFormKontrol()"
+                    class="btn btn-primary px-4"
+                  >
+                    JS ile Gönder
+                  </button>
+
+                  <button
+                    type="button"
+                    @click="vueFormKontrol"
+                    class="btn btn-success px-4"
+                  >
+                    Vue ile Gönder
+                  </button>
+
+                  <button type="reset" class="btn btn-outline-danger px-4">
+                    Formu Temizle
+                  </button>
+                </div>
+
+                <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+                <script src="script.js"></script>
+              </form>
             </div>
           </div>
         </div>
