@@ -118,7 +118,7 @@
             <!-- Galata kulesi -->
             <div class="carousel-item active">
               <img
-                src="/resimler/galatakulesi.jpg"
+                src="./resimler/galatakulesi.jpg"
                 class="d-block w-100"
                 alt="Galata"
                 style="height: 500px; object-fit: cover"
@@ -131,7 +131,7 @@
             <!-- Ayasofya -->
             <div class="carousel-item">
               <img
-                src="/resimler/ayasofya.jpg"
+                src="./resimler/ayasofya.jpg"
                 class="d-block w-100"
                 alt="Ayasofya"
                 style="height: 500px; object-fit: cover"
@@ -144,7 +144,7 @@
             <!-- Kız Kulesi -->
             <div class="carousel-item">
               <img
-                src="/resimler/kızkulesi.jpg"
+                src="./resimler/kızkulesi.jpg"
                 class="d-block w-100"
                 alt="Kız Kulesi"
                 style="height: 500px; object-fit: cover"
@@ -157,7 +157,7 @@
             <!-- Sultanahmet -->
             <div class="carousel-item">
               <img
-                src="/resimler/sultanahmetcamii.jpg"
+                src="./resimler/sultanahmetcamii.jpg"
                 class="d-block w-100"
                 alt="Sultanahmet"
                 style="height: 500px; object-fit: cover"
@@ -202,7 +202,7 @@
             <div class="card h-100 kart-efekti shadow-sm border-0">
               <!-- Türk Kahvesi -->
               <img
-                src="/resimler/turkkahvesi.jpg"
+                src="./resimler/turkkahvesi.jpg"
                 class="card-img-top object-fit-cover"
                 style="height: 200px"
                 alt="Türk Kahvesi"
@@ -222,7 +222,7 @@
             <div class="card h-100 kart-efekti shadow-sm border-0">
               <!-- Ebru Sanatı  -->
               <img
-                src="/resimler/ebru.jpg"
+                src="./resimler/ebru.jpg"
                 class="card-img-top object-fit-cover"
                 style="height: 200px"
                 alt="Ebru Sanatı"
@@ -242,7 +242,7 @@
             <div class="card h-100 kart-efekti shadow-sm border-0">
               <!-- Çini Sanatı -->
               <img
-                src="/resimler/cini.jpg"
+                src="./resimler/cini.jpg"
                 class="card-img-top object-fit-cover"
                 style="height: 200px"
                 alt="Çini Sanatı"
@@ -435,5 +435,74 @@
         </div>
       </div>
     </section>
+
+<!-- Login Formu Bölümü -->
+    <section id="login" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center mb-5 baslik-stili">Sisteme Giriş</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-sm border-0 p-4 kart-efekti">
+              <form id="indexLoginForm" action="login_islem.php" method="POST">
+                <div class="mb-3">
+                  <label for="indexEmail" class="form-label fw-semibold">Öğrenci E-posta</label>
+                  <input type="email" class="form-control" id="indexEmail" name="email" placeholder="b2412100001@sakarya.edu.tr">
+                  <div id="indexEmailHata" class="text-danger small mt-1" style="display: none;"></div>
+                </div>
+                <div class="mb-4">
+                  <label for="indexSifre" class="form-label fw-semibold">Şifre (Öğrenci No)</label>
+                  <input type="password" class="form-control" id="indexSifre" name="sifre" placeholder="Şifrenizi giriniz">
+                  <div id="indexSifreHata" class="text-danger small mt-1" style="display: none;"></div>
+                </div>
+                <div class="d-grid">
+                  <button type="button" onclick="indexLoginKontrol()" class="btn btn-primary py-2">Giriş Yap</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function indexLoginKontrol() {
+        const form = document.getElementById('indexLoginForm');
+        const emailInput = document.getElementById('indexEmail');
+        const sifreInput = document.getElementById('indexSifre');
+        const emailHata = document.getElementById('indexEmailHata');
+        const sifreHata = document.getElementById('indexSifreHata');
+        
+        let gecerli = true;
+        emailHata.style.display = 'none';
+        sifreHata.style.display = 'none';
+
+        const email = emailInput.value.trim();
+        const sifre = sifreInput.value.trim();
+
+        if (email === "") {
+            emailHata.textContent = "E-posta alanı boş bırakılamaz.";
+            emailHata.style.display = 'block';
+            gecerli = false;
+        } else {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailHata.textContent = "Lütfen geçerli bir e-posta adresi giriniz.";
+                emailHata.style.display = 'block';
+                gecerli = false;
+            }
+        }
+
+        if (sifre === "") {
+            sifreHata.textContent = "Şifre alanı boş bırakılamaz.";
+            sifreHata.style.display = 'block';
+            gecerli = false;
+        }
+
+        if (gecerli) {
+            form.submit();
+        }
+      }
+    </script>
+
   </body>
 </html>
