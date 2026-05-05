@@ -1,0 +1,153 @@
+/* Google Fonts'tan Inter fontunu çekiyoruz, oldukça modern duruyor */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Sitenin genel gövde ayarları */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Göz yormayan çok hafif gri bir arka plan */
+    color: #333;
+    scroll-behavior: smooth; /* Linklere tıklayınca yavaşça kaysın diye */
+}
+
+/* Üst navigasyon menüsü (Navbar) ayarları */
+.navbar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: rgba(33, 37, 41, 0.95) !important;
+    backdrop-filter: blur(10px); /* Arka planı hafif flu yapıyor (Glassmorphism etkisi) */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease; /* Hover anında renk değişimi yumuşak olsun */
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+}
+
+/* Ana başlıkların genel tarzı ve altındaki mavi çizgi detayı */
+.baslik-stili {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #212529;
+}
+
+/* Başlığın altına gelen mavi dekoratif çizgi */
+.baslik-stili::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: #0d6efd;
+    bottom: -10px;
+    left: 25%;
+    border-radius: 2px;
+}
+
+/* Sitedeki tüm kartlara (Özgeçmiş, Mirasımız vb.) uyguladığımız gölge ve havaya kalkma efekti */
+.kart-efekti {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none !important;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.kart-efekti:hover {
+    transform: translateY(-10px); /* Üzerine gelince kart 10px yukarı kalkar */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.kart-efekti .card-title {
+    font-weight: 600;
+}
+
+/* İstanbul sayfasındaki fotoğraf galerisi (slider) köşe ayarları */
+#istanbulSlider {
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.carousel-caption {
+    backdrop-filter: blur(5px);
+    padding: 15px;
+}
+
+/* Form alanlarının (input vb.) daha modern görünmesi için */
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+/* Inputlara tıklanınca etrafında oluşan mavi ışık */
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* Sitedeki tüm butonların genel hatları */
+.btn {
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Gönder butonlarına hafif havaya kalkma efekti ekleyelim */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
+}
+
+/* Tarihi Paralar API ile gelen kartların özel tasarımı */
+.coin-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.coin-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Formlardaki hata uyarılarının ekranda belirme animasyonu */
+.text-danger {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
