@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Özgeçmiş - Ege Hacıoğlu | Web Projesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sayfanın üst kısmında yer alan navigasyon (menü) çubuğumuz -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ege Hacıoğlu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+            <li class="nav-item"><a class="nav-link active" href="ozgecmis.html">Özgeçmiş</a></li>
+            <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+            <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+            <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+            <li class="nav-item"><a class="btn btn-primary btn-sm ms-lg-2" href="login.html">Giriş</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="ozgecmis" class="py-5 bg-light">
+      <div class="container">
+        <header class="text-center mb-5">
+            <h2 class="baslik-stili">Özgeçmişim</h2>
+            <p class="text-muted">Eğitim geçmişim ve yetkinliklerim</p>
+        </header>
+        
+        <div class="row g-4">
+          <article class="col-md-6">
+            <section class="card h-100 kart-efekti">
+              <div class="card-body">
+                <header>
+                    <h5 class="text-primary fw-bold mb-3">Eğitim Bilgileri</h5>
+                </header>
+                <p class="mb-1">
+                  <strong>Sakarya Üniversitesi</strong><br />
+                  Bilgisayar Mühendisliği Bölümü - 1. Sınıf Öğrencisi
+                </p>
+              </div>
+            </section>
+          </article>
+          
+          <aside class="col-md-6">
+            <section class="card h-100 kart-efekti">
+              <div class="card-body">
+                <header>
+                    <h5 class="text-primary fw-bold mb-3">Kendimi Geliştirdiğim Alanlar</h5>
+                </header>
+                <p class="mt-2">
+                    <span class="badge bg-dark me-1 p-2">C++</span>
+                    <span class="badge bg-dark me-1 p-2">C#</span>
+                    <span class="badge bg-dark me-1 p-2">HTML</span>
+                    <span class="badge bg-dark me-1 p-2">CSS</span>
+                    <span class="badge bg-dark me-1 p-2">Bootstrap</span>
+                    <span class="badge bg-dark me-1 p-2">SQL</span>
+                </p>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
