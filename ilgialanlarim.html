@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İlgi Alanlarım - Ege Hacıoğlu | Web Projesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sayfanın üst kısmında yer alan navigasyon çubuğumuz -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ege Hacıoğlu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+            <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
+            <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+            <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+            <li class="nav-item"><a class="nav-link active" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+            <li class="nav-item"><a class="btn btn-primary btn-sm ms-lg-2" href="login.html">Giriş</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="ilgi-alanlarim" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center mb-2 baslik-stili">İlgi Alanlarım - Diziler</h2>
+        <p class="text-center text-muted mb-5" style="margin-top: -10px;">En sevilen 12 popüler dizi ve detayları</p>
+        <div id="apiSonuc" class="row g-4 justify-content-center">
+          <div class="text-center">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Yükleniyor...</span>
+            </div>
+            <p class="mt-2 text-muted">API verileri çekiliyor...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
