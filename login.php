@@ -46,7 +46,7 @@
         <form id="loginForm" action="login_islem.php" method="POST">
             <div class="mb-3">
                 <label for="email" class="form-label fw-semibold">Öğrenci E-posta</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="b2412100001@sakarya.edu.tr">
+                <input type="email" class="form-control" id="email" name="email" placeholder="B251210555@gmail.com">
                 <div id="emailHata" class="text-danger small mt-1" style="display: none;"></div>
             </div>
 
