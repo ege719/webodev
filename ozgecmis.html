@@ -1,77 +1,145 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Özgeçmiş - Ege Hacıoğlu | Web Projesi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Sayfanın üst kısmında yer alan navigasyon (menü) çubuğumuz -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Ege Hacıoğlu</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-            <li class="nav-item"><a class="nav-link active" href="ozgecmis.html">Özgeçmiş</a></li>
-            <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-            <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-            <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
-            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-            <li class="nav-item"><a class="btn btn-primary btn-sm ms-lg-2" href="login.html">Giriş</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <main id="ozgecmis" class="py-5 bg-light">
-      <div class="container">
-        <header class="text-center mb-5">
-            <h2 class="baslik-stili">Özgeçmişim</h2>
-            <p class="text-muted">Eğitim geçmişim ve yetkinliklerim</p>
-        </header>
-        
-        <div class="row g-4">
-          <article class="col-md-6">
-            <section class="card h-100 kart-efekti">
-              <div class="card-body">
-                <header>
-                    <h5 class="text-primary fw-bold mb-3">Eğitim Bilgileri</h5>
-                </header>
-                <p class="mb-1">
-                  <strong>Sakarya Üniversitesi</strong><br />
-                  Bilgisayar Mühendisliği Bölümü - 1. Sınıf Öğrencisi
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Özgeçmiş - Ege Hacıoğlu | Web Projesi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Sayfanın üst kısmında yer alan navigasyon çubuğumuz -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ege Hacıoğlu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+          <li class="nav-item"><a class="nav-link active" href="ozgecmis.html">Özgeçmiş</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="btn btn-primary btn-sm ms-lg-2" href="login.html">Giriş</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CV baslık alanı -->
+  <div class="cv-header py-5" style="background-color: #e6f0fa; margin-top: -1px;">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-1" style="color: #1a202c; font-size: 2rem;">Ege Hacıoğlu - Özgeçmişim</h2>
+      <p class="text-muted mb-0" style="font-size: 1.1rem;">Sakarya Üniversitesi Bilgisayar Mühendisliği 1. Sınıf
+        Öğrencisi</p>
+    </div>
+  </div>
+
+  <!-- CV  -->
+  <main id="ozgecmis" class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Profil Özeti -->
+        <article class="col-md-6">
+          <section class="card h-100 border-0 shadow-sm" style="border-radius: 16px; transition: transform 0.3s ease;">
+            <div class="card-body p-4 p-md-5">
+              <header>
+                <h4 class="fw-bold mb-3" style="color: #2d3748;">Profil Özeti</h4>
+              </header>
+              <p class="text-secondary mb-0" style="line-height: 1.7;">
+                C++, C# ve modern web teknolojileri üzerinde çalışıyor, kendimi sürekli geliştiriyorum. Yazılım
+                dünyasındaki yenilikleri takip ederek karmaşık problemlere yenilikçi çözümler üretmeyi hedefliyorum.
+              </p>
+            </div>
+          </section>
+        </article>
+
+        <!-- Eğitim -->
+        <aside class="col-md-6">
+          <section class="card h-100 border-0 shadow-sm" style="border-radius: 16px; transition: transform 0.3s ease;">
+            <div class="card-body p-4 p-md-5">
+              <header>
+                <h4 class="fw-bold mb-4" style="color: #2d3748;">Eğitim</h4>
+              </header>
+              <div class="border-start border-3 ps-3" style="border-color: #0d6efd !important;">
+                <p class="mb-1 fw-semibold text-dark" style="font-size: 1.1rem;">
+                  Bilgisayar Mühendisliği - 1. Sınıf
+                </p>
+                <p class="text-secondary mb-0">
+                  Sakarya Üniversitesi
                 </p>
               </div>
-            </section>
-          </article>
-          
-          <aside class="col-md-6">
-            <section class="card h-100 kart-efekti">
-              <div class="card-body">
-                <header>
-                    <h5 class="text-primary fw-bold mb-3">Kendimi Geliştirdiğim Alanlar</h5>
-                </header>
-                <p class="mt-2">
-                    <span class="badge bg-dark me-1 p-2">C++</span>
-                    <span class="badge bg-dark me-1 p-2">C#</span>
-                    <span class="badge bg-dark me-1 p-2">HTML</span>
-                    <span class="badge bg-dark me-1 p-2">CSS</span>
-                    <span class="badge bg-dark me-1 p-2">Bootstrap</span>
-                    <span class="badge bg-dark me-1 p-2">SQL</span>
-                </p>
-              </div>
-            </section>
-          </aside>
-        </div>
-      </div>
-    </main>
+            </div>
+          </section>
+        </aside>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+        <!--Kariyer Hedefi -->
+        <article class="col-md-4">
+          <section class="card h-100 border-0 shadow-sm" style="border-radius: 16px; transition: transform 0.3s ease;">
+            <div class="card-body p-4">
+              <header>
+                <h4 class="fw-bold mb-3" style="color: #2d3748;">Kariyer Hedefi</h4>
+              </header>
+              <p class="text-secondary mb-0" style="font-size: 0.95rem; line-height: 1.6;">
+                Yazılım dünyasında kendimi sürekli geliştirerek, karmaşık problemlere yenilikçi ve sürdürülebilir
+                çözümler üreten başarılı bir Bilgisayar Mühendisi olmayı hedefliyorum. Modern teknolojileri projelerimde
+                aktif olarak kullanarak yetkinliklerimi her geçen gün artırmayı amaçlıyorum.
+              </p>
+            </div>
+          </section>
+        </article>
+
+        <!-- Diller -->
+        <aside class="col-md-4">
+          <section class="card h-100 border-0 shadow-sm" style="border-radius: 16px; transition: transform 0.3s ease;">
+            <div class="card-body p-4">
+              <header>
+                <h4 class="fw-bold mb-4" style="color: #2d3748;">Yetkinlikler</h4>
+              </header>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-dark px-3 py-2 rounded-2 fw-medium">C++</span>
+                <span class="badge bg-dark px-3 py-2 rounded-2 fw-medium">C#</span>
+                <span class="badge bg-dark px-3 py-2 rounded-2 fw-medium">HTML</span>
+                <span class="badge bg-dark px-3 py-2 rounded-2 fw-medium">CSS</span>
+                <span class="badge bg-dark px-3 py-2 rounded-2 fw-medium">Bootstrap</span>
+                <span class="badge bg-dark px-3 py-2 rounded-2 fw-medium">SQL</span>
+              </div>
+            </div>
+          </section>
+        </aside>
+
+        <!-- GitHub Profili -->
+        <aside class="col-md-4">
+          <section class="card h-100 border-0 shadow-sm" style="border-radius: 16px; transition: transform 0.3s ease;">
+            <div class="card-body p-4 d-flex flex-column">
+              <header>
+                <h4 class="fw-bold mb-4" style="color: #2d3748;">GitHub Profili</h4>
+              </header>
+              <div class="mt-auto mb-auto">
+                <a href="https://github.com" target="_blank"
+                  class="btn btn-dark w-100 rounded-pill py-3 fw-semibold d-flex align-items-center justify-content-center gap-2"
+                  style="background-color: #212529; border: none;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-github" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                  </svg>
+                  GitHub Profilim
+                </a>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
