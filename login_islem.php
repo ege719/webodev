@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"] ?? "");
     $sifre = trim($_POST["sifre"] ?? "");
 
-    if (empty($email) || empty($sifre) || $email !== $sifre . "@sakarya.edu.tr") {
+    if (empty($email) || empty($sifre) || $email !== "B251210555@gmail.com" || $sifre !== "B251210555") {
         header("Location: login.html?hata=1");
         exit();
     }
