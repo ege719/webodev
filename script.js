@@ -1,17 +1,6 @@
-// Sayfa yüklendiğinde çalışacak kodlarımız
 document.addEventListener('DOMContentLoaded', () => {
-    // API'den veri çekeceğimiz divi buluyoruz
-    const apiSonuc = document.getElementById('apiSonuc');
-    if (apiSonuc) {
-        // ilgi alanlarım kısmındaysak apıyı calıstırır
-        fetchShowsData();
-    }
-
-    // form kontrol edilip vue baslatılıyor 
-    const form = document.getElementById('iletisimFormu');
-    if (form) {
-        initVueApp();
-    }
+    if (document.getElementById('apiSonuc')) fetchShowsData();
+    if (document.getElementById('iletisimFormu')) initVueApp();
 });
 
 //apı kısmı dizilerin cekildigi yer
@@ -24,34 +13,23 @@ async function fetchShowsData() {
 
 
         const topShows = shows.slice(0, 12);
-
         let html = '';
+        
         for (const show of topShows) {
-            const imageUrl = show.image ? show.image.medium : 'https://via.placeholder.com/210x295?text=Gorsel+Yok';
-            const rating = show.rating && show.rating.average ? show.rating.average : 'Bilinmiyor';
-            const genres = show.genres.join(', ');
-
             html += `
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
                 <div class="card w-100 api-card-efekti border border-1">
-                    <img src="${imageUrl}" class="card-img-top" alt="${show.name}" style="height: 250px; object-fit: cover;">
+                    <img src="${show.image?.medium || 'https://via.placeholder.com/210x295?text=Gorsel+Yok'}" class="card-img-top" alt="${show.name}" style="height: 250px; object-fit: cover;">
                     <div class="card-body d-flex flex-column p-3">
                         <h6 class="card-title fw-bold text-dark mb-1" style="font-size: 1.1rem;">${show.name}</h6>
-                        <p class="card-text text-warning small fw-bold mb-1">
-                            ★ Puan: ${rating}
-                        </p>
-                        <p class="card-text text-muted small mb-2">
-                            📅 Çıkış: ${show.premiered || 'Bilinmiyor'}
-                        </p>
+                        <p class="card-text text-warning small fw-bold mb-1"> Puan: ${show.rating?.average || 'Bilinmiyor'}</p>
+                        <p class="card-text text-muted small mb-2"> Çıkış: ${show.premiered || 'Bilinmiyor'}</p>
                         <div class="mt-auto">
-                            <p class="card-text text-secondary mb-0" style="font-size: 0.8rem; line-height: 1.4;">
-                                ${genres}
-                            </p>
+                            <p class="card-text text-secondary mb-0" style="font-size: 0.8rem; line-height: 1.4;">${show.genres.join(', ')}</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            `;
+            </div>`;
         }
         apiSonuc.innerHTML = html;
     } catch (error) {
