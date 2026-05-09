@@ -1,153 +1,270 @@
-/* Google Fonts'tan Inter fontunu çekiyoruz, oldukça modern duruyor */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Google Fonts'tan Outfit fontunu çekiyoruz, çok daha modern ve havalı duruyor */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 /* Sitenin genel gövde ayarları */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa; /* Göz yormayan çok hafif gri bir arka plan */
-    color: #333;
-    scroll-behavior: smooth; /* Linklere tıklayınca yavaşça kaysın diye */
+    font-family: 'Outfit', sans-serif;
+    /* Premium animasyonlu gradient arka plan */
+    background: linear-gradient(-45deg, #fdfbfb, #ebedee, #fdfbfb, #f1f2f6);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #2d3436;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Üst navigasyon menüsü (Navbar) ayarları */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Üst navigasyon menüsü (Glassmorphism Navbar) ayarları */
 .navbar {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background: rgba(33, 37, 41, 0.95) !important;
-    backdrop-filter: blur(10px); /* Arka planı hafif flu yapıyor (Glassmorphism etkisi) */
+    background: #ffffffbf !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px #0000000d;
+    border-bottom: 1px solid #ffffff66;
+    padding: 15px 0;
+    transition: all 0.4s ease;
 }
 
 .navbar-brand {
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    /* Metne gradient renk veriyoruz */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.6rem;
 }
 
+/* Navigasyon linkleri ve altı çizili hover animasyonu */
 .nav-link {
-    font-weight: 500;
-    transition: color 0.3s ease; /* Hover anında renk değişimi yumuşak olsun */
+    font-weight: 600;
+    color: #4a5568 !important;
+    position: relative;
+    padding: 8px 15px !important;
+    margin: 0 5px;
+    transition: all 0.3s ease;
 }
 
-.nav-link:hover {
-    color: #0d6efd !important;
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 3px;
 }
 
-/* Ana başlıkların genel tarzı ve altındaki mavi çizgi detayı */
+.nav-link:hover::after, .nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #764ba2 !important;
+}
+
+/* Ana başlıkların premium tarzı */
 .baslik-stili {
     position: relative;
     display: inline-block;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #212529;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
 }
 
-/* Başlığın altına gelen mavi dekoratif çizgi */
 .baslik-stili::after {
     content: '';
     position: absolute;
-    width: 50%;
+    width: 40px;
     height: 4px;
-    background-color: #0d6efd;
-    bottom: -10px;
-    left: 25%;
-    border-radius: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    transition: width 0.3s ease;
 }
 
-/* Sitedeki tüm kartlara (Özgeçmiş, Mirasımız vb.) uyguladığımız gölge ve havaya kalkma efekti */
+.baslik-stili:hover::after {
+    width: 80px;
+}
+
+/* Sitedeki kartlara uygulanan modern havaya kalkma ve gölge efekti (Glassmorphism) */
 .kart-efekti {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 12px;
+    background: #ffffffd9;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff80 !important;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #00000008;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
-    border: none !important;
-    background: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .kart-efekti:hover {
-    transform: translateY(-10px); /* Üzerine gelince kart 10px yukarı kalkar */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px #764ba21a !important;
+    border-color: #764ba24d !important;
 }
 
 .kart-efekti .card-title {
-    font-weight: 600;
+    font-weight: 700;
+    color: #2b5876;
 }
 
 /* İstanbul sayfasındaki fotoğraf galerisi (slider) köşe ayarları */
 #istanbulSlider {
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px #00000026 !important;
+    border: 8px solid white;
 }
 
 .carousel-caption {
-    backdrop-filter: blur(5px);
-    padding: 15px;
+    background: #00000066;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 20px;
+    bottom: 30px;
+    border: 1px solid #ffffff33;
 }
 
-/* Form alanlarının (input vb.) daha modern görünmesi için */
+/* Form alanlarının daha modern görünmesi için */
 .form-control, .form-select {
-    border-radius: 8px;
-    padding: 12px 15px;
-    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 14px 20px;
+    border: 2px solid #edf2f7;
+    background-color: #f8fafc;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-/* Inputlara tıklanınca etrafında oluşan mavi ışık */
 .form-control:focus, .form-select:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    border-color: #667eea;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px #667eea26;
 }
 
-/* Sitedeki tüm butonların genel hatları */
+/* Sitedeki tüm butonların havalı hali */
 .btn {
-    border-radius: 8px;
-    padding: 10px 24px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-/* Gönder butonlarına hafif havaya kalkma efekti ekleyelim */
 .btn-primary {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    box-shadow: 0 10px 20px #764ba233;
 }
 
 .btn-primary:hover {
-    background-color: #0b5ed7;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 25px #764ba266;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
 .btn-success {
-    background-color: #198754;
-    border-color: #198754;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border: none;
+    box-shadow: 0 10px 20px #38ef7d33;
 }
 
 .btn-success:hover {
-    background-color: #157347;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 25px #38ef7d66;
+    background: linear-gradient(135deg, #38ef7d 0%, #11998e 100%);
 }
 
-/* Tarihi Paralar API ile gelen kartların özel tasarımı */
-.coin-card {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
+/* Sayfa yüklendiğinde elemanların yavaşça yukarı doğru gelme animasyonu */
+section, .container {
+    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.coin-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Formlardaki hata uyarılarının ekranda belirme animasyonu */
+/* Formlardaki hata uyarılarının ekranda titreyerek belirme animasyonu */
 .text-danger {
-    animation: fadeIn 0.3s ease-in-out;
+    animation: shake 0.4s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
 }
+
+/* --- YENİ GİRİŞ (HERO) KISMI STİLLERİ --- */
+.hero-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Arkadaki renkli blok tasarımı (Orijinaldeki yeşil kutu yerine modern soft gradient kavisli kutu) */
+.hero-bg-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(135deg, #ebf4f5e6 0%, #b5c6e066 100%);
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+    z-index: 0;
+}
+
+/* Profil Fotoğrafı Alanı (Ortadaki yuvarlak) */
+.profile-img-container {
+    width: 160px;
+    height: 160px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 5px solid #ffffffcc;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease;
+    box-shadow: 0 15px 35px #0000001a !important;
+}
+
+.profile-img-container:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.hero-name {
+    letter-spacing: -1px;
+    color: #2b5876 !important;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+}
+
+/* API Kart Tasarimi */
+.api-card-efekti { border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; background: #fff; }
+.api-card-efekti:hover { transform: translateY(-8px); box-shadow: 0 12px 24px #0000001a !important; }
