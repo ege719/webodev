@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- Sayfanın üst kısmında yer alan navigasyon (menü) çubuğumuz -->
+  <!-- Sayfanın üst kısmında yer alan navigasyon çubuğumuz -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Ege Hacıoğlu</a>
@@ -32,18 +32,25 @@
   </nav>
 
   <!-- Yeni Giriş Kısmı -->
-  <section id="hero" class="hero-section text-center position-relative py-5">
+  <section id="hero" class="hero-section position-relative py-5">
     <div class="container position-relative z-1 mt-4">
-      <!-- Profil Fotoğrafı Alanı -->
-      <div class="profile-img-container mx-auto mb-4 shadow-lg d-flex align-items-center justify-content-center">
-        <span class="text-secondary fw-bold">Ege</span>
+      <div class="row align-items-center justify-content-center justify-content-md-start px-md-5">
+        <!-- Profil Fotoğrafı Alanı -->
+        <div class="col-12 col-md-auto mb-4 mb-md-0 d-flex justify-content-center">
+          <div class="profile-img-container shadow-lg d-flex align-items-center justify-content-center">
+            <img src="resimler/profil.png" alt="Ege Hacıoğlu" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          </div>
+        </div>
+        <!-- Yazı Alanı -->
+        <div class="col-12 col-md-8 text-center text-md-start ms-md-4">
+          <h1 class="hero-name display-4 fw-bold text-dark mb-2">Ege Hacıoğlu</h1>
+          <p class="hero-subtitle lead fw-semibold text-muted mb-3">
+            Sakarya Üniversitesi Bilgisayar Mühendisliği Öğrencisi
+          </p>
+        </div>
       </div>
-      <h1 class="hero-name display-4 fw-bold text-dark mb-2">Ege Hacıoğlu</h1>
-      <p class="hero-subtitle lead fw-semibold text-muted mb-3">
-        Sakarya Üniversitesi Bilgisayar Mühendisliği Öğrencisi
-      </p>
     </div>
-     
+
     <!-- Arka plan renk bloğu -->
     <div class="hero-bg-shape"></div>
   </section>
@@ -66,7 +73,7 @@
             <!-- Hobiler Kısmı -->
             <div class="col-md-6">
               <div class="card kart-efekti p-4 h-1000">
-                <h3 class="baslik-stili mb-4 text-center" style="font-size: 1.6rem;">Hobilerim ve Etkinlikler</h3>
+                <h3 class="baslik-stili mb-4 text-center" style="font-size: 1.6rem;">Hobilerim </h3>
                 <ul class="list-group list-group-flush text-secondary" style="font-size: 1rem;">
                   <li class="list-group-item bg-transparent"> Yeni teknolojileri araştırmak ve projeler geliştirmek</li>
                   <li class="list-group-item bg-transparent"> Bilim kurgu kitapları okumak</li>
