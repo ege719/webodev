@@ -41,7 +41,7 @@
         <form id="loginForm" onsubmit="event.preventDefault(); loginKontrol();">
             <div class="mb-3">
                 <label for="email" class="form-label fw-semibold">Öğrenci E-posta</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="b2412100001@sakarya.edu.tr">
+                <input type="email" class="form-control" id="email" name="email" placeholder="B251210555@gmail.com">
                 <div id="emailHata" class="text-danger small mt-1" style="display: none;"></div>
             </div>
 
@@ -98,10 +98,7 @@ function loginKontrol() {
     }
 
     if (gecerli) {
-        // PHP'deki kural: Email [sifre]@sakarya.edu.tr formatında olmalı.
-        const beklenenEmail = sifre + "@sakarya.edu.tr";
-        
-        if (email === beklenenEmail) {
+        if (email === "B251210555@gmail.com" && sifre === "B251210555") {
             // Başarılı giriş: Javascript ile başarılı sayfasına yönlendir
             window.location.href = "basarili.html?sifre=" + encodeURIComponent(sifre);
         } else {
